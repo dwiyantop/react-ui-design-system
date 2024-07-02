@@ -9,7 +9,14 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
 }
 
-export function Button({ customClass, color = 'default', size = 'md', variant = 'solid', ...props }: ButtonProps) {
+export function Button({
+  customClass,
+  color = 'default',
+  size = 'md',
+  variant = 'solid',
+  children = 'Button',
+  ...props
+}: ButtonProps) {
   const buttonVariantClassStyle = `ds-button-${variant}`;
   const buttonColorClassStyle = `ds-button-${variant}-${color}`;
   const buttonSizeClassStyle = `ds-button-size-${size}`;
@@ -19,5 +26,9 @@ export function Button({ customClass, color = 'default', size = 'md', variant = 
     buttonClassName += ` ${customClass}`;
   }
 
-  return <button {...props} className={buttonClassName} />;
+  return (
+    <button {...props} className={buttonClassName}>
+      {children}
+    </button>
+  );
 }

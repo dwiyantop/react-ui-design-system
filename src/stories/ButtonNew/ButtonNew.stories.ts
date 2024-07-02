@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
+import '../../../dist/style.css';
 import { Button } from '../../../lib/components/Button';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
@@ -26,10 +27,11 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Asd: Story = {
+export const ButtonNew: Story = {
   args: {
     color: 'default',
     size: 'md',
     variant: 'solid',
+    children: 'Button',
   },
 };
