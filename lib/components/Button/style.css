@@ -1,0 +1,51 @@
+.ds-button-base {
+  @apply inline-flex items-center justify-center gap-2 rounded-md font-semibold disabled:cursor-not-allowed;
+}
+.ds-button-size-sm {
+  @apply px-2 h-8 text-xs;
+}
+.ds-button-size-md {
+  @apply px-3 h-9 text-xs;
+}
+.ds-button-size-lg {
+  @apply px-3 h-10 text-sm;
+}
+.ds-button-solid {
+  @apply ds-button-base;
+  @apply shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2;
+}
+.ds-button-outline {
+  @apply ds-button-base;
+  @apply transition duration-150 ease-in-out;
+  @apply border-2;
+}
+.ds-button-text {
+  @apply flex items-center justify-center gap-2 font-semibold disabled:cursor-not-allowed;
+}
+.ds-button-solid-default {
+  @apply text-gray-800 bg-gray-200 hover:bg-gray-300;
+}
+.ds-button-solid-primary {
+  @apply text-white bg-ds-primary hover:bg-ds-primary-700;
+}
+.ds-button-solid-secondary {
+  @apply text-white bg-gray-600 hover:bg-gray-700;
+}
+.ds-button-outline-default {
+  @apply text-gray-500 border-gray-300 hover:border-gray-400;
+}
+.ds-button-outline-primary {
+  @apply text-ds-primary border-ds-primary hover:border-ds-primary-700;
+}
+.ds-button-outline-secondary {
+  @apply text-gray-600 border-gray-600 hover:border-gray-700;
+}
+.ds-button-text-default {
+  @apply text-gray-500;
+}
+.ds-button-text-primary {
+  @apply text-ds-primary;
+}
+.ds-button-text-secondary {
+  @apply text-gray-600;
+}
