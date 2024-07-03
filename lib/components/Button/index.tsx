@@ -1,3 +1,5 @@
+import './style.css';
+
 type ButtonVariant = 'solid' | 'outline' | 'text';
 type ButtonSize = 'sm' | 'md' | 'lg';
 type ButtonColor = 'default' | 'primary' | 'secondary';
@@ -17,9 +19,9 @@ export function Button({
   children = 'Button',
   ...props
 }: ButtonProps) {
-  const buttonVariantClassStyle = `ds-button-${variant}`;
-  const buttonColorClassStyle = `ds-button-${variant}-${color}`;
-  const buttonSizeClassStyle = `ds-button-size-${size}`;
+  const buttonVariantClassStyle = `button-${variant}`;
+  const buttonColorClassStyle = `button-${variant}-${color}`;
+  const buttonSizeClassStyle = `button-size-${size}`;
   let buttonClassName = `${buttonVariantClassStyle} ${buttonColorClassStyle} ${buttonSizeClassStyle}`;
 
   if (customClass) {

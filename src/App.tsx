@@ -1,5 +1,4 @@
-import '../dist/style.css';
-import { Button } from '../';
+import { Button } from '../lib/components/Button';
 
 function App() {
   return (
